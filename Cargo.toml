@@ -1,0 +1,32 @@
+[package]
+name = "sheetkeel"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Blazing-fast, single-binary Rust Excel (.xlsx/.xls/.xlsb/.ods) Swiss-army CLI: inspect, unmerge, export to CSV/TSV/JSONL/Parquet/SQLite, pack multi-tab workbooks, and diff spreadsheets (DX + AX)."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/robertguss/sheetkeel"
+homepage = "https://github.com/robertguss/sheetkeel"
+keywords = ["excel", "xlsx", "spreadsheet", "parquet", "sqlite"]
+categories = ["command-line-utilities", "development-tools", "encoding"]
+
+[dependencies]
+arrow-array = "60.2"
+arrow-schema = "60.2"
+calamine = { version = "0.38", features = ["dates"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.6", features = ["derive"] }
+csv = "1.4"
+indexmap = { version = "2.14", features = ["serde"] }
+owo-colors = { version = "4.4", features = ["supports-colors"] }
+parquet = { version = "60.2", default-features = false, features = ["arrow", "snap", "flate2-rust_backend", "zstd"] }
+rusqlite = { version = "0.37", features = ["bundled"] }
+rust_xlsxwriter = "0.103"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+
+[dev-dependencies]
+assert_cmd = "2.2"
+predicates = "3.1"
+tempfile = "3.27"

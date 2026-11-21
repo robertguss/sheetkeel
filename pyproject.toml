@@ -1,0 +1,34 @@
+[build-system]
+requires = ["maturin>=1.10,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "sheetkeel"
+dynamic = ["version"]
+description = "Blazing-fast Rust Excel (.xlsx/.xls/.xlsb/.ods) Swiss-army CLI: inspect, unmerge, export to CSV/TSV/JSONL/Parquet/SQLite, pack, and diff spreadsheets."
+readme = "README.md"
+license = { text = "MIT OR Apache-2.0" }
+authors = [{ name = "Robert Guss" }]
+requires-python = ">=3.9"
+keywords = ["excel", "xlsx", "spreadsheet", "csv", "parquet", "sqlite", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/robertguss/sheetkeel"
+Repository = "https://github.com/robertguss/sheetkeel"
+Issues = "https://github.com/robertguss/sheetkeel/issues"
+
+[tool.maturin]
+bindings = "bin"
+compatibility = "pypi"
+strip = true

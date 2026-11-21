@@ -1,0 +1,10 @@
+/target
+**/*.rs.bk
+.DS_Store
+*.xlsx
+*.xls
+*.csv
+*.parquet
+*.db
+*.sqlite
+*.jsonl
